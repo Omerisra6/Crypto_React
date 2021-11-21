@@ -16,6 +16,7 @@ function App() {
       price:'0', 
       min:'0', 
       max:'0', 
+      last_sales:[],
       channel:'live_trades_btcusd'
     }, 
     {
@@ -23,6 +24,7 @@ function App() {
       price:'0', 
       min:'0', 
       max:'0', 
+      last_sales:[],
       channel:'live_trades_ethusd'
     }],)
 
@@ -49,6 +51,10 @@ function App() {
       const price   = details.data.price
       const channel = details.channel
 
+      if( ! price){
+        return
+      }
+
       Coins.forEach(coin => {          
         
         //finding which coin is it
@@ -62,9 +68,8 @@ function App() {
           let updatedList = Coins.map(item => 
             {
               if (item.name == name){
-                console.log(item)
 
-                return Object.assign(item, {price:price, max:maxPrice, min:minPrice})
+                return Object.assign(item, {price:price, max:maxPrice, min:minPrice, last_sales:item.last_sales.push(price)})
 
                 // return {...item, price:price, max:maxPrice, min:minPrice}; //gets everything that was already in item, and updates it
               }
@@ -95,7 +100,6 @@ function App() {
   
     //gets the highest price
     function max(coin, price) {
-      console.log(coin, price)
       let max = coin.max
 
       if (coin.max < price) {
@@ -112,8 +116,6 @@ function App() {
     function min(coin, price) {
 
       let min = coin.min
-
-      console.log(coin.min)
       if (coin.min > price || ! coin.min || coin.min == 0) {
 
         return price
@@ -138,10 +140,10 @@ function App() {
       <table key="table">
         <thead>
             <tr className="title-row">
-              <th className="title">Market</th>
               <th className="title">Price</th>
-              <th className="title">Change 24H</th>
-              <th className="title">Dynamic</th>
+              <th className="title">Max</th>
+              <th className="title">Min</th>
+              <th className="title">Latest</th>
             </tr>
         </thead>
         <tbody>
