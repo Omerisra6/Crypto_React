@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body{
+    background-color: #2DCE54;
+    font-family: Dosis;
+}
+
+.wrapper{
+    position:absolute;
+    padding: 50px;
+    top: 50%;   
+    left: 50%;
+    width: 70vw;
+    height: 80vh;
+    min-width: 500px;
+    min-height: 400px;
+    background-color: white;
+    transform: translate(-50%,-50%);
+    background-color: #21242E;
+}
+

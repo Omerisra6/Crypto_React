@@ -1,0 +1,48 @@
+.header{
+    font-size: 1vw;
+    color: #C9CACC;
+    display: flex;
+    justify-content: left;
+    height: 15vh;
+    margin-left: 2.5vw;
+    
+}
+
+.top-right{
+    display: flex;
+}
+
+.header-button, .log-in{
+    height: fit-content;
+    cursor: pointer;
+    padding: 1vw;
+}
+
+.header-button:hover{
+    background-color: #000;
+}
+
+.top-right{
+    margin-left: 4vw;
+    width: fit-content;
+    display: flex;
+    justify-content: right;
+}
+
+.log-in{
+    color: #21242E;
+    background-color: #2DCE54;
+    border-radius: 0.2vw;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+
+}
+
+.logo{
+    position: relative;
+    bottom: 4vh;
+    width: 15vw;
+
+}
+
+

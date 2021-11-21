@@ -1,0 +1,56 @@
+.poster{
+    position: relative;
+    bottom: 5vh;
+    display: flex;
+    width: 60vw;
+    height: 45vh;
+    margin-left: 4vw;
+    background-color: #2DCE54;
+    padding: 1vw;
+    border-radius: 0.5vw;
+    min-width: 350px;
+
+}
+
+.join-best{
+    font-size: 3vw;
+
+}
+
+
+
+.left-poster{
+    width: 25vw;
+    padding: 1vw;
+}
+
+.right-poster{
+    width: 35vw;
+   
+}
+
+.back-img{
+    width: 35vw;
+    height: 46vh;
+    position: relative;
+    float: right;
+    left: 1vw;
+    min-width: 220px;
+}
+
+.start-trading{
+    cursor: pointer;
+    position: relative;
+    top: 2vh;
+    background-color: #21242E;
+    padding: 0.5vw 1vw;
+    color: #2DCE54;
+    border: none;
+    border-radius: 0.25vw;
+    width: 12vw;
+
+}
+
+.trade-with{
+    margin-top: 1vh;
+}
