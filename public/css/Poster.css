@@ -58,3 +58,7 @@
 .trade-with{
     margin-top: 1vh;
 }
+
+.top-right > div{
+    border-left: #212c2f 1px solid;
+}

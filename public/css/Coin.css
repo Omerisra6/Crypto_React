@@ -29,6 +29,7 @@ table{
 
 .short-name{
     color: #848887;
+    font-size: 1vw;
 }
 
 td{
@@ -44,3 +45,4 @@ td{
     align-items: center;
     justify-items: center;
 }
+
