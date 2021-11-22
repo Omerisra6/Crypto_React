@@ -1,11 +1,8 @@
-import React, { useState, useRef, useEffect} from 'react'
-
+import React, { useState,  useEffect} from 'react'
 import Coin from './Coin'
 import { w3cwebsocket as W3CWebSocket } from "websocket";
 import Header from './Header';
 import Poster from './Poster';
-
-
 
 
 function App() {
@@ -16,34 +13,39 @@ function App() {
       price:'0', 
       min:'0', 
       max:'0', 
+      short_name:'BTC',
       last_sales:[],
-      channel:'live_trades_btcusd'
+      channel:'live_trades_btcusd',
+      logo:'assets/bitcoin-btc-logojpg.jpg'
     }, 
     {
       name:'Etherium',
       price:'0', 
       min:'0', 
       max:'0', 
+      short_name:'ETH',
       last_sales:[],
-      channel:'live_trades_ethusd'
+      channel:'live_trades_ethusd',
+      logo:'assets/etherium-logo.png'
     }],)
 
   
 
   useEffect(() => {
 
+    //connecting to socket
     const conn = new W3CWebSocket('wss://ws.bitstamp.net/')
   
     conn.onopen = function() {
     
       console.log('WebSocket Client Connected');
 
+      //subscribing to all socket channels
       subscribe(Coins)     
       
     }
 
 
-   
     conn.onmessage  = function( msg ){
 
       //gets msg details
@@ -58,7 +60,6 @@ function App() {
       Coins.forEach(coin => {          
         
         //finding which coin is it
-
         if (coin.channel == channel) {
           
           const name     = coin.name
@@ -69,12 +70,19 @@ function App() {
             {
               if (item.name == name){
 
-                return Object.assign(item, {price:price, max:maxPrice, min:minPrice, last_sales:item.last_sales.push(price)})
+                //removes the first element in the array if neccesery
+                const prices = item.last_sales
+               
+                //adds the new price
+                prices.push(price)
 
-                // return {...item, price:price, max:maxPrice, min:minPrice}; //gets everything that was already in item, and updates it
+                //updates the coin
+                return Object.assign(item, {price:price, max:maxPrice, min:minPrice, last_sales:prices})
               }
               return item; // else return unmodified item 
           });
+
+          //setting new coins list
           setCoins( updatedList )
         
         }
@@ -136,27 +144,30 @@ function App() {
       {Header()}
 
       {Poster()}
+      <div key="table-container" className="table-container">
+        <table key="table">
+          <thead>
+              <tr className="title-row">
+              <th classsName="title"></th>
+                <th classsName="title"></th>
+                <th className="title">Price</th>
+                <th className="title">Highet</th>
+                <th className="title">Lowest</th>
+                <th className="title">Latest</th>
+              </tr>
+          </thead>
+          <tbody>
 
-      <table key="table">
-        <thead>
-            <tr className="title-row">
-              <th className="title">Price</th>
-              <th className="title">Max</th>
-              <th className="title">Min</th>
-              <th className="title">Latest</th>
-            </tr>
-        </thead>
-        <tbody>
+            {Coins.map( crypto =>{
+              return Coin(crypto)
+            })}
 
-          {Coins.map( crypto =>{
-            return Coin(crypto)
-          })}
+            
 
-         
+          </tbody>
 
-        </tbody>
-
-    </table>
+      </table>
+    </div>
 
   
      

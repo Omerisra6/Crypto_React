@@ -1,0 +1,46 @@
+.chart{
+    background-color: #21242E;
+   
+}
+.coin-logo{
+    width: 4vw;
+}
+.coin-logo > img{
+    
+    width: 4vw;
+}
+
+table{
+    min-width: 560px;
+    width: 60vw;
+   
+    color: #fff;
+}
+
+.title{
+    color: #848887;
+    font-size: 1vw;
+}
+
+.coin-name > h4{
+    display: inline;
+    padding: 0.2vw;
+}
+
+.short-name{
+    color: #848887;
+}
+
+td{
+    padding: 1vw;
+    min-width: 50px;
+}
+
+.table-container{
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+}

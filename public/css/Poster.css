@@ -1,20 +1,24 @@
 .poster{
     position: relative;
     bottom: 5vh;
+    left: 5vw;
     display: flex;
     width: 60vw;
-    height: 45vh;
-    margin-left: 4vw;
+    height: 35vh;
     background-color: #2DCE54;
     padding: 1vw;
     border-radius: 0.5vw;
-    min-width: 350px;
+    min-width: 560px;
 
 }
 
 .join-best{
-    font-size: 3vw;
+    font-size: 2vw;
 
+}
+
+.the-best{
+    font-size: 1vw;
 }
 
 
@@ -30,8 +34,8 @@
 }
 
 .back-img{
-    width: 35vw;
-    height: 46vh;
+    width: 28vw;
+    height: 36vh;
     position: relative;
     float: right;
     left: 1vw;

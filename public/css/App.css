@@ -17,10 +17,9 @@ body{
     left: 50%;
     width: 70vw;
     height: 80vh;
-    min-width: 500px;
+    min-width: 600px;
     min-height: 400px;
     background-color: white;
     transform: translate(-50%,-50%);
     background-color: #21242E;
 }
-
