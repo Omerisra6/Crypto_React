@@ -4,7 +4,6 @@ export default function Poster() {
     return (
         <div className="poster">
            
-
             <div className="left-poster">
                 <h5 className="no-comission">0% comission</h5>
                 <h2 className="join-best">Join the best cryptocurrency exchange</h2>
@@ -13,8 +12,7 @@ export default function Poster() {
             </div>
 
             <div className="right-poster">
-                <img className="back-img" src="assets/poster.jpg" />
-    
+                <img alt="poster" className="back-img" src="assets/poster.jpg" />
             </div>
             
         </div>
