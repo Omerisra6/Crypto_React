@@ -3,14 +3,14 @@ export default function useCoinChart( coin )
   const backgroundColor = getChartColor( coin )
   const chartWidth  = 150  
   const chartHeight = 75
-  const maxPoints   = 6
+  const maxPoints   = 7
 
   const chartData = {
       labels: coin.name,
       datasets: [{
         label: 'price',
         labels: [],
-        data: coin.last_sales ? coin.last_sales.slice( -6 ) : [],
+        data: coin.last_sales ? coin.last_sales.slice( ( maxPoints * -1 ) ) : [],
         fill: true,
         backgroundColor,
         showLine: false ,
