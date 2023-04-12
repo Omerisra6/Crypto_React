@@ -15,7 +15,7 @@ export default function Coin( { coin } )
             
             <td className="coin-symbols">
                 <div className="coin-symbols-container">
-                    <span className="coin-logo"><img src={coin.logo}/></span>
+                    <span className="coin-logo"><img alt="coin-logo" src={coin.logo}/></span>
                     <h4 className="short-name">{coin.short_name}</h4>
                     <h4>({coin.name})</h4>
                 </div>
