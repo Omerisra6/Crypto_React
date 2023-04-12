@@ -59,3 +59,44 @@
     align-items: center;
     justify-content: center;
 }
+
+@media only screen and (max-width: 768px) {
+    .poster{
+        
+        min-width: 0;
+    }
+
+    .no-comission{
+        font-size: 0.3rem;
+        color: #686D77;
+    }
+    
+    .join-best{
+        color: #22211F;
+        font-size: 1rem;
+    }
+    
+    .trade-with{
+        font-size: 0.5rem;
+        color: #9ca59e;
+        padding: 2vh 0;
+    }
+    
+    .back-img{
+      height: 25vw;
+    }
+    
+    .crypto-svg-path{   
+        fill: #D2D2D4;
+    }
+    
+    .start-trading{
+        font-size: 0.3rem;
+        cursor: pointer;
+        padding: 1vh 2vw;
+        background-color: #6FD691;
+        border: none;
+        border-radius: 3px;
+        width: 12vw;
+    }
+}

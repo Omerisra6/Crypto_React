@@ -44,3 +44,11 @@ td{
     text-align: center;
 }
 
+@media only screen and (max-width: 768px) {
+    td{
+        padding: 0;
+        min-width: 0;
+        font-size: 0.7rem;
+        width: 100px;
+    } 
+}

@@ -59,3 +59,18 @@
 }
 
 
+@media only screen and (max-width: 768px) {
+    .header{
+        font-size: 0.3rem;
+        padding: 1vh 3vw;
+        width: 94vw;
+    }
+    
+    .header-links-container > .header-button{
+        width: auto;
+    }
+
+    .top-right > div{
+        width: auto;
+    }
+}

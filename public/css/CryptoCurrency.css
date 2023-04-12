@@ -4,6 +4,7 @@
     width: 100%;
     height: 100%;
     padding: 2vh 0 0 0;
+    min-width: 800px;
 }
 
 .table-container{
@@ -17,4 +18,10 @@ table{
     border-left: 1px solid #B2C5C1;
     border-right: 1px solid #B2C5C1;
     margin: 0 3vw;
+}
+
+@media only screen and (max-width: 768px) {
+    .crypto-page{
+        min-width: 0;
+    }
 }
