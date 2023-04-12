@@ -51,7 +51,7 @@ export const socketOnMessage = ( socketClient, coins, setCoins ) => {
     {
         return coins.map( coin => {          
         
-            if ( coin.channel != channel ) 
+            if ( coin.channel !== channel ) 
             {
                 return coin
             }
