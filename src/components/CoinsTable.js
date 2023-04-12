@@ -19,7 +19,7 @@ export default function CoinsTable()
                 <tbody>
                     {coins.map( crypto => {
 
-                        return <Coin coin={ crypto }/>
+                        return <Coin key={ crypto.name } coin={ crypto }/>
                     })}
                 </tbody>
             </table>
