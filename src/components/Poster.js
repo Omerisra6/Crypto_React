@@ -12,7 +12,7 @@ export default function Poster() {
             </div>
 
             <div className="right-poster">
-                <object type="image/svg+xml" className="back-img" data="assets/crypto-exchange-icon.svg" ></object>
+                <object type="image/svg+xml" className="back-img" data="assets/crypto-exchange-icon.svg">This image is a crypto currency ilustration</object>
             </div>
             
         </div>
