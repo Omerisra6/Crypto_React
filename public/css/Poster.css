@@ -92,11 +92,7 @@
     
     .start-trading{
         font-size: 0.3rem;
-        cursor: pointer;
         padding: 1vh 2vw;
-        background-color: #6FD691;
-        border: none;
-        border-radius: 3px;
-        width: 12vw;
+        width: auto;
     }
 }
