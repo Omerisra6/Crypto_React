@@ -1,15 +1,31 @@
 .header{
-    font-size: 1vw;
-    color: #C9CACC;
+    font-size: 0.75vw;
+    color: #373D42;
     display: flex;
-    justify-content: left;
-    height: 15vh;
-    margin-left: 2.5vw;
-    
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #B2C5C1;
+    padding: 1vh 0;
+    font-weight: bold;
+    padding: 1vh 3vw;
+}
+
+.logo{
+    font-size: 1.25vw;
+    font-weight: bold;
+}
+
+.header-links-container{
+    display: flex;
+}
+
+.header-links-container > .header-button{
+    width: 4vw;
 }
 
 .top-right{
     display: flex;
+    align-items: center;
 }
 
 .header-button, .log-in{
@@ -18,15 +34,20 @@
     padding: 1vw;
 }
 
-.header-button:hover{
-    background-color: #000;
-}
-
 .top-right{
-    margin-left: 4vw;
     width: fit-content;
     display: flex;
     justify-content: right;
+    border-left: 1px solid #B2C5C1;
+}
+
+.top-right > div{
+    width: 4vw;
+    text-align: center;
+}
+
+.top-right > .header-button{
+    border-right: 1px solid #B2C5C1;
 }
 
 .log-in{
@@ -35,14 +56,6 @@
     border-radius: 0.2vw;
     padding-left: 0.5vw;
     padding-right: 0.5vw;
-
-}
-
-.logo{
-    position: relative;
-    bottom: 4vh;
-    width: 15vw;
-
 }
 
 

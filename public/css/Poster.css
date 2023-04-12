@@ -1,64 +1,61 @@
 .poster{
     position: relative;
-    bottom: 5vh;
-    left: 5vw;
     display: flex;
-    width: 60vw;
-    height: 35vh;
-    background-color: #2DCE54;
-    padding: 1vw;
+    border-left: 1px solid #B2C5C1;
+    border-right: 1px solid #B2C5C1;
     border-radius: 0.5vw;
     min-width: 560px;
+    margin: 0 3vw;
+}
 
+.poster > div{
+    flex-grow: 1;
+    flex-basis: 1;
+    padding: 7vh 2vw;
+}
+
+.no-comission{
+    font-size: 2vh;
+    color: #686D77;
 }
 
 .join-best{
-    font-size: 2vw;
-
+    color: #22211F;
+    font-size: 5vh;
 }
 
-.the-best{
-    font-size: 1vw;
+.trade-with{
+    font-size: 1.5vh;
+    color: #9ca59e;
+    padding: 2vh 0;
 }
 
+.back-img{
+  height: 25vh;
+}
 
+.crypto-svg-path{   
+    fill: #D2D2D4;
+}
+
+.start-trading{
+    font-size: 2vh;
+    cursor: pointer;
+    padding: 1vh 2vw;
+    background-color: #6FD691;
+    border: none;
+    border-radius: 3px;
+    width: 12vw;
+}
 
 .left-poster{
     width: 25vw;
     padding: 1vw;
+    border-right: 1px solid #B2C5C1;
 }
 
 .right-poster{
-    width: 35vw;
-   
-}
-
-.back-img{
-    width: 28vw;
-    height: 36vh;
-    position: relative;
-    float: right;
-    left: 1vw;
-    min-width: 220px;
-}
-
-.start-trading{
-    cursor: pointer;
-    position: relative;
-    top: 2vh;
-    background-color: #21242E;
-    padding: 0.5vw 1vw;
-    color: #2DCE54;
-    border: none;
-    border-radius: 0.25vw;
-    width: 12vw;
-
-}
-
-.trade-with{
-    margin-top: 1vh;
-}
-
-.top-right > div{
-    border-left: #212c2f 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -4,7 +4,7 @@ export default function Header() {
     return (
         <div className="header">
 
-            <img className="logo" src="/assets/logojpg.jpg"/>
+            <div className="logo">localtrade</div>
             <div className="header-links-container">
                 <div className="header-button">Buy Crypto</div>
                 <div className="header-button">Finance</div>

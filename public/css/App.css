@@ -1,25 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800&display=swap');
 *{
     margin: 0;
     padding: 0;
     text-decoration: none;
+    font-family: Nunito Sans;
 }
 
 body{
-    background-color: #2DCE54;
-    font-family: Dosis;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(205,213,204);
+    background: linear-gradient(0deg, rgba(205,213,204,1) 0%, rgba(210,218,215,1) 100%);    
 }
 
-.wrapper{
+.app{
+    display: flex;
+    flex-direction: column;
     position:absolute;
-    padding: 50px;
     top: 50%;   
     left: 50%;
-    width: 70vw;
-    height: 80vh;
     min-width: 600px;
-    min-height: 400px;
-    background-color: white;
+    min-height: 400px;    
+    background: rgb(205,217,214);
+    background: linear-gradient(0deg, rgba(205,217,214,1) 0%, rgba(204,210,205,1) 100%);
     transform: translate(-50%,-50%);
-    background-color: #21242E;
 }

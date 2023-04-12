@@ -10,7 +10,6 @@ export default function CoinsTable()
                 <thead>
                     <tr className="title-row">
                         <th classsName="title"></th>
-                        <th classsName="title"></th>
                         <th className="title">Price</th>
                         <th className="title">Highet</th>
                         <th className="title">Lowest</th>

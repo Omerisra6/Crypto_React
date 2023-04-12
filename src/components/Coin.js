@@ -13,10 +13,12 @@ export default function Coin( { coin } )
     return (
         <tr className="coin-row" key={coin.name}>
             
-            <td className="coin-logo"><img src={coin.logo}/></td>
-            <td className="coin-name">
-                <h4>{coin.name}</h4>
-                <h4 className="short-name">({coin.short_name})</h4>
+            <td className="coin-symbols">
+                <div className="coin-symbols-container">
+                    <span className="coin-logo"><img src={coin.logo}/></span>
+                    <h4 className="short-name">{coin.short_name}</h4>
+                    <h4>({coin.name})</h4>
+                </div>
             </td>
             <td className="coin-price">{coin.price ?? 'N/A'}</td>
             <td className="coin-max">{ coinMaxPrice !== -Infinity  ? coinMaxPrice : 'N/A' }</td>
