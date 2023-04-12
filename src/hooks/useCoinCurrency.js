@@ -10,13 +10,13 @@ export default function useCoins( )
                 name:'Bitcoin',
                 short_name:'BTC',
                 channel:'live_trades_btcusd',
-                logo:'assets/bitcoin-btc-logojpg.jpg'
+                logo:'assets/bitcoin-icon.svg'
             }, 
             {
-                name:'Etherium',
+                name:'Ethereum',
                 short_name:'ETH',
                 channel:'live_trades_ethusd',
-                logo:'assets/etherium-logo.png'
+                logo:'assets/ethereum-icon.svg'
             }
         ]
     )
