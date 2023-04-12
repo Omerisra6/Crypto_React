@@ -25,7 +25,7 @@ export default function useCoins( )
     useEffect( () => {
 
         socketOnMessage( socketClient, coins, setCoins )
-    }, [] )
+    }, [ coins, socketClient ] )
 
     return coins
 }
