@@ -1,69 +1,71 @@
-Crypto Currency Tracker
 
-Crypto Currency Tracker is a simple React application that allows you to track the latest prices of various cryptocurrencies in real-time using WebSockets.
-Getting Started
-Prerequisites
+<h1 align="center">
+  <br>
+  <a href="https://omerisra6-crypto-currency-tracker.netlify.app/"><img src="https://cdn-icons-png.flaticon.com/512/3667/3667779.png" alt="Crypto Currency Tracker App" width="200"></a>
+  <br>
+  <a href="https://omerisra6-crypto-currency-tracker.netlify.app/">Crypto Currency Tracker App</a>
+  <br>
+</h1>
 
-Before you get started, make sure you have the following installed on your computer:
+<h4 align="center">A single page Crypt o Currency Tracker App built with <a href="https://react.dev/" target="_blank">React</a>.</h4>
+<p align="center"></p>
+<p align="center">
+  <a href="#key-features">Key Features</a> •
+  <a href="#how-to-use">How To Use</a> •
+  <a href="#credits">Credits</a> •
+  <a href="#license">License</a>
+</p>
+<h2 align="center">
+  Screenshots
+  <br>
+  <br>
+  <a href="https://omerisra6-crypto-currency-tracker.netlify.app/"><img src="https://i.postimg.cc/BQtWgz3w/omerisra6-crypto-currency-tracker-netlify-app-1.png" alt="Screenshot-100" border="0"/></a>
+  <br>
+  <a href="https://omerisra6-crypto-currency-tracker.netlify.app/"><img src="https://i.postimg.cc/4N0DF1N4/omerisra6-crypto-currency-tracker-netlify-app.png" alt="Screenshot-2023-04-20-at-10-51-57-React-App" border="0" height="400"/></a>
+</h2>
 
-    Node.js (v14.16.1 or higher)
 
-Installation
+## Key Features
 
-    Clone the repository to your local machine:
+* Real-Time Data
+  - The app fetches the current currency data for Bitcoin and Ethereum from an API using a socket client, ensuring that users receive up-to-date information.
+* Interactive Chart
+  - The app displays the fetched data on a chart, allowing users to visually track the price fluctuations of Bitcoin and Ethereum over time.
+* Responsive Design
+  - The app is designed to be responsive and accessible across various devices and screen sizes. It provides an optimal viewing experience on desktops, tablets, and mobile devices.
+* Currency Comparison
+  - Users can compare the current prices of Bitcoin and Ethereum side by side on the chart, enabling them to analyze the performance of both cryptocurrencies simultaneously.
+* User-friendly interface
 
-    bash
+## How To Use
 
-git clone https://github.com/<username>/<repo-name>.git
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
-Navigate to the project directory:
+```bash
+# Clone this repository
+$ git clone https://github.com/Omerisra6/crypto-currency-tracker
 
-bash
+# Install dependencies
+$ npm install
 
-cd <repo-name>
+# Run the app
+$ npm start
+```
 
-Install the dependencies:
+## Credits
 
-bash
+This software uses the following open source packages:
 
-    npm install
+- [React](https://react.dev/)
+- [Node.js](https://nodejs.org/)
 
-Usage
 
-    Start the development server:
+## License
 
-    bash
+MIT
 
-npm start
+---
 
-Open the application in your browser:
+> GitHub [@omerisra6](https://github.com/Omerisra6) &nbsp;&middot;&nbsp;
+> Linkedin [@omerisraeli](https://www.linkedin.com/in/omer-israeli6/)
 
-bash
-
-    http://localhost:3000/
-
-Features
-
-    Real-time updates of cryptocurrency prices using WebSockets
-    View the latest price of each cryptocurrency
-
-Built With
-
-    React - A JavaScript library for building user interfaces
-    React ChartJS 2 - A react wrapper for Chart.js 2
-    WebSockets - A protocol providing full-duplex communication channels over a single TCP connection
-
-Contributing
-
-Contributions are always welcome! If you'd like to contribute to this project, please follow these steps:
-
-    Fork the project
-    Create a new branch (git checkout -b feature/<feature-name>)
-    Make your changes
-    Commit your changes (git commit -m "<commit-message>")
-    Push to the branch (git push origin feature/<feature-name>)
-    Create a pull request
-
-License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
