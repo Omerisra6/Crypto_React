@@ -19,9 +19,9 @@
   Screenshots
   <br>
   <br>
-  <a href="https://omerisra6-crypto-currency-tracker.netlify.app/"><img src="https://i.postimg.cc/BQtWgz3w/omerisra6-crypto-currency-tracker-netlify-app-1.png" alt="Screenshot-100" border="0"/></a>
+  <a href="https://omerisra6-crypto-currency-tracker.netlify.app/"><img src="https://i.postimg.cc/jqvr0Fbt/Screen-Shot-2023-05-24-at-20-36-01.png" alt="Screenshot-100" border="0"/></a>
   <br>
-  <a href="https://omerisra6-crypto-currency-tracker.netlify.app/"><img src="https://i.postimg.cc/4N0DF1N4/omerisra6-crypto-currency-tracker-netlify-app.png" alt="Screenshot-2023-04-20-at-10-51-57-React-App" border="0" height="400"/></a>
+  <a href="https://omerisra6-crypto-currency-tracker.netlify.app/"><img src="https://i.postimg.cc/Znfk8CcC/Screen-Shot-2023-05-24-at-20-36-26.png" border="0" height="400"/></a>
 </h2>
 
 
