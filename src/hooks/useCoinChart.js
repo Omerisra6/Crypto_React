@@ -22,7 +22,7 @@ export default function useCoinChart( coin )
   }
 
   const chartOptions = { 
-      maintainAspectRatio: false, responsive: false,  
+      maintainAspectRatio: false, responsive: true,  
           
       plugins: {
         legend: {

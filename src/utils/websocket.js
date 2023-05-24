@@ -1,34 +1,21 @@
 import { w3cwebsocket as W3CWebSocket } from "websocket";
 
-export const createSocketConnection = ( baseUrl, coins ) => {
+export const createSocket = ( coins, setCoins ) => {
 
-    const socketClient = new W3CWebSocket( baseUrl )
+    const socketURL = process.env.REACT_APP_SOCKET_URL || 'wss://ws.bitstamp.net/'
 
-    socketClient.onopen = function() 
-    {
-        subscribeCoins( coins )      
-    }
+    const socketClient = new W3CWebSocket( socketURL )
 
-    function subscribeCoins( coins ) 
-    {
-        coins.forEach(coin => {
-
-            const subscribeOptions = {
-            
-                "event": "bts:subscribe",
-                "data": {
-                    "channel": coin.channel
-                }
-            }
-
-            socketClient.send( JSON.stringify( subscribeOptions ));
-        });  
-    }
+    attachListenersToSocket( socketClient, coins, setCoins )
 
     return socketClient
 }
 
-export const socketOnMessage = ( socketClient, coins, setCoins ) => {
+function  attachListenersToSocket ( socketClient, coins, setCoins ) {
+
+    socketClient.onopen = function(){
+        subscribeCoins( coins, socketClient )      
+    }
 
     socketClient.onmessage = ( msg ) => {
 
@@ -41,28 +28,42 @@ export const socketOnMessage = ( socketClient, coins, setCoins ) => {
             return
         }
 
-        const updatedCoins = updateCoinPrices( coins, price, channel )       
+        const updatedCoins = getUpdatedCoinPrices( coins, price, channel )
 
         //setting new coins list
         setCoins( updatedCoins )
     }
+}
 
-    function updateCoinPrices( coins, price, channel ) 
-    {
-        return coins.map( coin => {          
+function subscribeCoins( coins, socketClient ) 
+{
+    coins.forEach(coin => {
+
+        const subscribeOptions = {
         
-            if ( coin.channel !== channel ) 
-            {
-                return coin
+            "event": "bts:subscribe",
+            "data": {
+                "channel": coin.channel
             }
+        }
 
-            const prices = coin.last_sales ?? []
-            
-            //adds the new price
-            prices.push( price )
+        socketClient.send( JSON.stringify( subscribeOptions ));
+    });  
+}
 
-            //updates the coin
-            return Object.assign( coin, { price:price, last_sales:prices } )
-        });
-    }
+function getUpdatedCoinPrices( coins, price, channel ) 
+{
+    return coins.map( coin => {          
+    
+        if ( coin.channel !== channel ) 
+        {
+            return coin
+        }
+
+        const prices = coin.last_sales ?? []
+        
+        prices.push( price )
+
+        return Object.assign( coin, { price:price, last_sales:prices } )
+    });
 }
