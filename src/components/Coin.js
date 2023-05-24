@@ -4,7 +4,7 @@ import useCoinChart from '../hooks/useCoinChart'
 
 export default function Coin( { coin } ) 
 {
-    const { chartData, chartOptions, chartHeight, chartWidth } = useCoinChart( coin )
+    const { chartData, chartOptions } = useCoinChart( coin )
     
     const lastSales    = coin.last_sales ?? []
     const coinMaxPrice = Math.max( ...lastSales )
@@ -23,7 +23,7 @@ export default function Coin( { coin } )
             <td className="coin-price">{coin.price ?? 'N/A'}</td>
             <td className="coin-max">{ coinMaxPrice !== -Infinity  ? coinMaxPrice : 'N/A' }</td>
             <td className="coin-min">{ coinMinPrice !== Infinity  ? coinMinPrice : 'N/A' }</td>
-            <Line width={chartWidth} height={chartHeight} data={chartData} className="chart" options={chartOptions}/>
+            <td><Line data={chartData} className="chart" options={chartOptions}/></td>
             
         </tr>   
     ) 

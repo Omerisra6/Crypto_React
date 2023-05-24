@@ -1,69 +1,88 @@
 .header{
-    font-size: 0.75vw;
-    color: #373D42;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 6vh;
+    font-size: 0.7vw;
+    color: #3E5A55;
     border-bottom: 1px solid #B2C5C1;
     padding: 1vh 0;
     font-weight: bold;
-    padding: 1vh 3vw;
+    padding: 1vh 3vw 0 3vw;
 }
 
 .logo{
     font-size: 1.25vw;
     font-weight: bold;
+    color: #2B2E3F;
 }
 
 .header-links-container{
     display: flex;
-}
-
-.header-links-container > .header-button{
-    width: 4vw;
-}
-
-.top-right{
-    display: flex;
     align-items: center;
 }
 
-.header-button, .log-in{
+.header-links-container > .header-button{
+   white-space: nowrap;
+}
+
+.header-button{
+    text-align: center;
     height: fit-content;
     cursor: pointer;
-    padding: 1vw;
+    padding: 0.75vh 1vw;
 }
 
 .top-right{
     width: fit-content;
     display: flex;
     justify-content: right;
-    border-left: 1px solid #B2C5C1;
 }
 
-.top-right > div{
+.header-actions-container > div{
     width: 4vw;
     text-align: center;
 }
 
-.top-right > .header-button{
-    border-right: 1px solid #B2C5C1;
+.header-actions-container{
+    display: flex;
+    align-items: center;
+    padding-right: 1vw;
+}
+
+.header-actions-container > .header-action{
+    color: #343746;
+    padding: 1vh 0;
+    border-left: 1px solid #B2C5C1;
+    font-weight: bold;
 }
 
 .log-in{
-    color: #21242E;
-    background-color: #2DCE54;
-    border-radius: 0.2vw;
-    padding-left: 0.5vw;
-    padding-right: 0.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6FD691;
+    border-radius: 2px;
+    width: 4vw;
+    cursor: pointer;
+    padding: 1vh 1vw;
+    font-size: 0.75vw;
 }
 
+.buy-crypto-container, .finance-container{
+    display: flex;
+    align-items: center;
+}
+
+.material-icons.icon-sm{
+    font-size: 1.2vw;
+}
 
 @media only screen and (max-width: 768px) {
     .header{
         font-size: 0.2rem;
-        padding: 1vh 3vw;
-        width: 94vw;
+        padding: 1vw 3vh;
+        height: auto;
     }
     
     .header-links-container > .header-button{
@@ -74,7 +93,14 @@
         width: auto;
     }
 
-    .logo{
-        font-size: 0.5rem;
+    .log-in{
+        width: 80px;
+        cursor: pointer;
+        padding: 1vw 1vh;
+        font-size: 0.2rem;
+    }
+
+    .header-actions-container > .header-action{
+        padding: 1vw 1vh;
     }
 }

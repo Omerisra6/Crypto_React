@@ -19,7 +19,7 @@ body{
     position:absolute;
     top: 50%;   
     left: 50%;
-    min-width: 600px;
+    min-width: 60vw;
     min-height: 400px;    
     background: rgb(205,217,214);
     background: linear-gradient(0deg, rgba(205,217,214,1) 0%, rgba(204,210,205,1) 100%);
@@ -27,10 +27,6 @@ body{
 }
 
 @media only screen and (max-width: 768px) {
-    .app{
-        min-width: 0;
-        min-height: 0;    
-    }   
 
     #root{
         width: 100%;
@@ -45,5 +41,8 @@ body{
         top: 0;   
         left: 0;    
         transform: none;
+        width: 100%;
+        min-width: 0;
+        min-height: 0;   
     }    
 }

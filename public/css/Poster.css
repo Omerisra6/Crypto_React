@@ -39,18 +39,19 @@
 }
 
 .start-trading{
-    font-size: 2vh;
+    font-size: 1.5vh;
+    font-weight: bold;
     cursor: pointer;
-    padding: 1vh 2vw;
+    padding: 1.5vh 3vw;
     background-color: #6FD691;
     border: none;
     border-radius: 3px;
-    width: 12vw;
+    color: #242822;
+    word-spacing: 2px;
 }
 
 .left-poster{
-    width: 25vw;
-    padding: 1vw;
+    width: 10vw;
     border-right: 1px solid #B2C5C1;
 }
 

@@ -8,7 +8,7 @@
     justify-content: flex-start;
     height: 100%;
     gap: 0.5vw;
-    font-size: 1vw;
+    font-size: 0.7vw;
     color: #848887;
 }
 
@@ -21,20 +21,22 @@ td{
 }
 
 tr{
-    text-align: center;
+    text-align: left;
+    padding-left: 1vw;
 }
 
+
 .coin-logo > img{    
-    width: 4vw;
+    width: 2vw;
 }
 
 .title{
     color: #848887;
-    font-size: 1vw;
+    font-size: 0.75vw;
 }
 
 td{
-    padding: 1vw;
+    width: 25%;
     min-width: 50px;
 }
 
@@ -42,6 +44,10 @@ td{
     display: flex;
     justify-content: center;
     text-align: center;
+}
+
+canvas.chart{
+    width:  100%;
 }
 
 @media only screen and (max-width: 768px) {
