@@ -1,99 +1,98 @@
-.poster{
-    position: relative;
-    display: flex;
-    border-left: 1px solid #B2C5C1;
-    border-right: 1px solid #B2C5C1;
-    border-radius: 0.5vw;
-    min-width: 560px;
-    margin: 0 3vw;
+.poster {
+  position: relative;
+  display: flex;
+  border-left: 1px solid #b2c5c1;
+  border-right: 1px solid #b2c5c1;
+  border-radius: 0.5vw;
+  min-width: 560px;
+  margin: 0 3vw;
 }
 
-.poster > div{
-    flex-grow: 1;
-    flex-basis: 1;
-    padding: 7vh 2vw;
+.poster > div {
+  flex-grow: 1;
+  flex-basis: 1;
+  padding: 7vh 2vw;
 }
 
-.no-comission{
-    font-size: 2vh;
-    color: #686D77;
+.no-comission {
+  font-size: 2vh;
+  color: #686d77;
 }
 
-.join-best{
-    color: #22211F;
-    font-size: 5vh;
+.join-best {
+  color: #22211f;
+  font-size: 5vh;
 }
 
-.trade-with{
-    font-size: 1.5vh;
-    color: #9ca59e;
-    padding: 2vh 0;
+.trade-with {
+  font-size: 1.5vh;
+  color: #9ca59e;
+  padding: 2vh 0;
 }
 
-.back-img{
+.back-img {
   height: 25vh;
 }
 
-.crypto-svg-path{   
-    fill: #D2D2D4;
+.crypto-svg-path {
+  fill: #d2d2d4;
 }
 
-.start-trading{
-    font-size: 1.5vh;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 1.5vh 3vw;
-    background-color: #6FD691;
-    border: none;
-    border-radius: 3px;
-    color: #242822;
-    word-spacing: 2px;
+.start-trading {
+  font-size: 1.5vh;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 1.5vh 3vw;
+  background-color: #6fd691;
+  border: none;
+  border-radius: 3px;
+  color: #242822;
+  word-spacing: 2px;
 }
 
-.left-poster{
-    width: 10vw;
-    border-right: 1px solid #B2C5C1;
+.left-poster {
+  width: 10vw;
+  border-right: 1px solid #b2c5c1;
 }
 
-.right-poster{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.right-poster {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 768px) {
-    .poster{
-        
-        min-width: 0;
-    }
+  .poster {
+    min-width: 0;
+  }
 
-    .no-comission{
-        font-size: 0.3rem;
-        color: #686D77;
-    }
-    
-    .join-best{
-        color: #22211F;
-        font-size: 1rem;
-    }
-    
-    .trade-with{
-        font-size: 0.5rem;
-        color: #9ca59e;
-        padding: 2vh 0;
-    }
-    
-    .back-img{
-      height: 25vw;
-    }
-    
-    .crypto-svg-path{   
-        fill: #D2D2D4;
-    }
-    
-    .start-trading{
-        font-size: 0.3rem;
-        padding: 1vh 2vw;
-        width: auto;
-    }
+  .no-comission {
+    font-size: 0.3rem;
+    color: #686d77;
+  }
+
+  .join-best {
+    color: #22211f;
+    font-size: 1rem;
+  }
+
+  .trade-with {
+    font-size: 0.5rem;
+    color: #9ca59e;
+    padding: 2vh 0;
+  }
+
+  .back-img {
+    height: 25vw;
+  }
+
+  .crypto-svg-path {
+    fill: #d2d2d4;
+  }
+
+  .start-trading {
+    font-size: 0.3rem;
+    padding: 1vh 2vw;
+    width: auto;
+  }
 }
