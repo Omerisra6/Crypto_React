@@ -1,9 +1,13 @@
 import Coin from './Coin'
-import { createSocket } from '../utils/websocket'
-import { useEffect, useRef, useState } from 'react'
+
+import { useEffect, useState } from 'react'
+import { useSocket } from '../contexts/SocketContext'
+import { socketOnMessage, socketOnOpen } from '../utils/SocketHandlers'
 
 export default function CoinsTable() 
 {
+    const socket = useSocket()
+
     const [coins, setCoins ] = useState(
         [
             {
@@ -20,15 +24,13 @@ export default function CoinsTable()
             }
         ]
     )
-
-    const socketClientRef = useRef( null )
-
-    useEffect(() => {
-
-        socketClientRef.current = socketClientRef.current ?? createSocket( coins, setCoins )
-        
-    }, [ coins ])
     
+    useEffect(() => {
+        
+        socket.onopen    = () => { socketOnOpen( coins, socket ) }
+        socket.onmessage = ( msg ) => { socketOnMessage( msg, coins, setCoins ) }
+      
+    }, [ socket, coins ])
     
     
     return (
